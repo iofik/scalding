@@ -19,7 +19,7 @@ val algebirdVersion = "0.13.0"
 val apacheCommonsVersion = "2.2"
 val avroVersion = "1.7.4"
 val bijectionVersion = "0.9.5"
-val cascadingAvroVersion = "2.1.2"
+val cascadingAvroVersion = "3.0-SNAPSHOT"
 val chillVersion = "0.8.4"
 val elephantbirdVersion = "4.15"
 val hadoopLzoVersion = "0.4.19"
@@ -73,7 +73,8 @@ val sharedSettings = assemblySettings ++ scalariformSettings ++ Seq(
     Opts.resolver.sonatypeReleases,
     "Concurrent Maven Repo" at "http://conjars.org/repo",
     "Twitter Maven" at "https://maven.twttr.com",
-    "Cloudera" at "https://repository.cloudera.com/artifactory/cloudera-repos/"
+    "Cloudera" at "https://repository.cloudera.com/artifactory/cloudera-repos/",
+    "Local Maven Repository" at "file://"+Path.userHome.absolutePath+"/.m2/repository"
   ),
 
   printDependencyClasspath := {
